@@ -6,9 +6,11 @@
   <title>Header</title>
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
+  
     <div>
       <div class="navigation" id="aaa-menu">
     <div class="ribbon-container block overflow-x-hidden w-full">
@@ -86,11 +88,49 @@
     </nav>
     </div>
   </div>
+  <style> 
+  /* Banner Style */
+  :root {
+    --swiper-navigation-size: 40px;
+}
+.swiper{
+  /* overflow: unset; */
+}
+.swiper-button-next,
+.swiper-button-prev {
+cursor:pointer;
+background-color: #3333334f;
+color: rgba(255, 255, 255, 0.277) !important;
+}
+.swiper-button-next {
+width: 70px !important;
+height: 70px !important;
+border-radius: 100%;
+right: -35px !important;
+top:  45%;
+}
+
+.swiper-button-prev {
+width: 70px !important;
+height: 70px !important;
+border-radius: 100%;
+left: -35px !important;
+top:  45%;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+background-color: #333333b5!important;
+color: rgba(255, 255, 255, 0.703)!important;
+transition: all 80ms ease-in;
+}
+  </style>
   <section class="w-full bg-transparent py-0">
-          <div class="wrapper-banner banner-carou banner-section">
-                <div class="inner-wrapper">
-                  <div class="scroll-wrapper">
-                      <div class="item-wrapper">
+          <div class=" wrapper-banner banner-carou banner-section ">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+                <div class=" swiper mySwiper inner-wrapper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
                               <div class="banner-img-wrapper">
                                     <picture>
                                           <img src="/src/img/11.11sale.webp" alt="Banner">
@@ -105,11 +145,41 @@
                                       </div>
                                     </div>
                       </div>
-
+                      <div class="swiper-slide item-wrapper ">
+                              <div class="banner-img-wrapper">
+                                    <picture>
+                                          <img src="/src/img/123.webp" alt="Banner">
+                                    </picture>
+                                    <a href="#" class="banner-img-link"></a>
+                              </div>
+                              <div class="content-wrapper">
+                                      <h2 class="banner-title"><div>SUPERSALE 11.11</div></h2>
+                                      <p class="subtitle"> Sale for all , All is sale</p>
+                                      <div class="button">
+                                          <a href="#" class="pill-button">Shop Now</a>
+                                      </div>
+                                    </div>
+                      </div>
+                      
                   </div>
                 </div>
           </div>
   </section>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+    speed: 750,
+    rewind: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,   
+    autoplay: {
+            delay: 1000,
+    },
+    });
+
+    </script>
     </body>
 
 </html>
