@@ -51,67 +51,31 @@
         </nav>
       </header>
 
-      <main class="w-full h-auto py-10">
-        <div class="fixed top-60 left-auto">
-          <div class="mt-6">
-            <a href="#" class="border w-full text-base px-2 py-2 box-border border-black bg-black text-white  font-semibold ">Xem đơn hàng</a>
+      <main class="w-full h-auto py-10 relative">
+        <div class="absolute top-0 left-0 flex flex-col">
+          <button 
+            class="uppercase w-fit mt-6 text-md font-bold text-white bg-black rounded-md py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+         <a href="">Sửa thông tin</a> 
+        </button>
+        <button 
+            class="uppercase w-fit mx-auto mt-6 text-md font-bold text-white bg-black rounded-md py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+         <a href="">Lịch sử đơn hàng</a> 
+        </button>
+        </div>
+
+        <div class="w-[400px] mx-auto h-auto flex flex-col justify-center items-center">
+          <div  class=" w-full p-5 flex flex-col gap-y-5 shadow-xl shadow-gray-300 rounded-lg " >
+            <h1 class="text-center"><b class="text-2xl">Tài khoản của bạn</b> </h1>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Tên</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Email</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Số điện thoại</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Địa chỉ</div>
           </div>
       
-          <div class="mt-6">
-            <a href="#" class="border w-full text-base px-2 py-2 box-border border-black bg-black text-white  font-semibold ">Cập nhật tài khoản</a>
-          </div>
+          
+      
         </div>
-        <div class="flex justify-center items-center w-full">
-          <div class="w-96 p-6 shadow-lg bg-white rounded-md">
-            <h1 class="text-3xl block text-center font-semibold mb-12">
-              Tài Khoản Của Bạn
-            </h1>
-           
-            <div class="mt-3">
-              <label for="username" class="block text-base mb-2">
-                Họ và tên
-              </label>
-              <input
-                type="text"
-                id="username"
-                class="border w-full text-base px-2 py-2 focus:outline-none focus:ring-0 focus:border-gray-1000 rounded-md"
-                placeholder="Trần An Huy"
-              />
-            </div>
-
-            <div class="mt-3">
-              <label for="email" class="block text-base mb-2"> Gmail </label>
-              <input
-                type="email"
-                id="email"
-                class="border w-full text-base px-2 py-2 focus:outline-none focus:ring-0 focus:border-gray-1000 rounded-md"
-                placeholder="huy@gmail.com"
-              />
-            </div>
-
-            <div class="mt-3">
-              <label for="phone" class="block text-base mb-2">
-                Số điện thoại
-              </label>
-              <input
-                type="text"
-                id="phone"
-                class="border w-full text-base px-2 py-2 focus:outline-none focus:ring-0 focus:border-gray-1000 rounded-md"
-                placeholder="0123456789"
-              />
-            </div>
-
-            <div class="mt-3">
-              <label for="adress" class="block text-base mb-2"> Địa chỉ </label>
-              <input
-                type="text"
-                id="adress"
-                class="border w-full text-base px-2 py-2 focus:outline-none focus:ring-0 focus:border-gray-1000 rounded-md"
-                placeholder="Quận 12"
-              />
-            </div>
-          </div>
-        </div>
+       
         
       </main>
 
