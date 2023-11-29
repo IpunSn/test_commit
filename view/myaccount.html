@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../view/css/output.css"/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../view/css/output.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Home</title>
   </head>
@@ -33,14 +43,40 @@
             <div>
               <a href=""><img src="../view/img/human.svg" alt="" /></a>
             </div>
-            <div><a href=""></a><img src="../view/img/search.svg" alt="" /></div>
+            <div>
+              <a href=""></a><img src="../view/img/search.svg" alt="" />
+            </div>
             <div><a href=""></a><img src="../view/img/cart.svg" alt="" /></div>
           </div>
         </nav>
       </header>
 
-      <main class="w-full h-auto py-10">
-        <!-- code ở đây -->
+      <main class="w-full h-auto py-10 relative">
+        <div class="absolute top-0 left-0 flex flex-col">
+          <button 
+            class="uppercase w-fit mt-6 text-md font-bold text-white bg-black rounded-md py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+         <a href="">Sửa thông tin</a> 
+        </button>
+        <button 
+            class="uppercase w-fit mx-auto mt-6 text-md font-bold text-white bg-black rounded-md py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+         <a href="">Lịch sử đơn hàng</a> 
+        </button>
+        </div>
+
+        <div class="w-[400px] mx-auto h-auto flex flex-col justify-center items-center">
+          <div  class=" w-full p-5 flex flex-col gap-y-5 shadow-xl shadow-gray-300 rounded-lg " >
+            <h1 class="text-center"><b class="text-2xl">Tài khoản của bạn</b> </h1>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Tên</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Email</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Số điện thoại</div>
+            <div class="border border-gray-300 px-4 py-2 rounded-md">Địa chỉ</div>
+          </div>
+      
+          
+      
+        </div>
+       
+        
       </main>
 
       <footer class="w-full py-5 px-5 bg-[#333333] text-[#FFFFFF]">
@@ -158,6 +194,6 @@
     </div>
     <!-- thằng cha -->
 
-<script src="../view/js/index.js"></script>
+    <script src="../view/js/index.js"></script>
   </body>
 </html>

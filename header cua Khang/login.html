@@ -46,15 +46,15 @@
     
                 <input
                     class="border border-gray-300 px-4 py-2 rounded-md transition duration-300 hover:border-blue-500 focus:outline-none focus:ring focus:border-blue-500 "
-                    type="text" id="name" name="name" placeholder="Email">
-    
+                    type="text" id="name" name="name" placeholder="Email Or Your Username">
+                    <label for="name"><span></span></label>
                 <input
                     class="border border-gray-300 px-4 py-2 rounded-md transition duration-300 hover:border-blue-500 focus:outline-none focus:ring focus:border-blue-500"
-                    type="tel" id="phone" name="phone" placeholder="Mật Khẩu">
+                    type="password" id="password" name="password" placeholder="Mật Khẩu">
+                    <label for="password" id="passwordLabel"><span id="error-message"></span></label>
     
     
-    
-                <button
+                <button onsubmit="return validateForm()"
                     class="w-fit mx-auto mt-6 text-xl font-bold text-white bg-black rounded-md py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
                     ĐĂNG NHẬP
                 </button>
@@ -165,7 +165,7 @@
               <input
                 class="bg-input-footer w-full h-12 rounded-[4px] px-4"
                 placeholder="Gõ vô đây"
-                type="text" required
+                type="text"
               />
               <button
                 type="submit"
@@ -186,6 +186,19 @@
     </div>
     <!-- thằng cha -->
 
-<script src="../view/js/index.js"></script>
+    <script>
+        function validateForm() {
+        // Lấy giá trị từ form
+        var usernameOrEmail = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+
+        // Kiểm tra xem các trường có rỗng không
+        if (usernameOrEmail === '' || password === '') {
+            document.getElementById("error-message").innerText = "Vui lòng điền đầy đủ thông tin.";
+            return false;
+        }
+      }
+
+  </script>
   </body>
 </html>
