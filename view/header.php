@@ -80,7 +80,7 @@ $html_menu='';
             <nav class="w-full h-20 grid grid-cols-[15%_70%_auto] relative">
                 <div class="w-full">
                     <div class="w-full h-full relative">
-                    <a href="index.php"><img class="w-full h-full px-5 absolute top-0 left-0"
+                        <a href="index.php"><img class="w-full h-full px-5 absolute top-0 left-0"
                                 src="view/img/logo.png" alt="" /></a>
                     </div>
                 </div>
