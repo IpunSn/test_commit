@@ -68,63 +68,62 @@
         ';
     }
 ?>
-
-  <section class="w-full bg-transparent py-0">
-          <div class=" wrapper-banner banner-carou banner-section ">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-                <div class=" swiper mySwiper inner-wrapper">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                              <div class="banner-img-wrapper">
-                                    <picture>
-                                          <img src="../view/img/banner1.webp" alt="Banner">
-                                    </picture>
-                                    <a href="#" class="banner-img-link"></a>
-                              </div>
-                              <div class="content-wrapper">
-                                      <h2 class="banner-title"><div>SUPERSALE 11.11</div></h2>
-                                      <p class="subtitle"> Sale for all , All is sale</p>
-                                      <div class="button">
-                                          <a href="#" class="pill-button">Shop Now</a>
-                                      </div>
-                                    </div>
-                      </div>
-                      <div class="swiper-slide item-wrapper ">
-                              <div class="banner-img-wrapper">
-                                    <picture>
-                                          <img src="../view/img/banner2.webp" alt="Banner">
-                                    </picture>
-                                    <a href="#" class="banner-img-link"></a>
-                              </div>
-                              <div class="content-wrapper">
-                                      <h2 class="banner-title"><div>SUPERSALE 11.11</div></h2>
-                                      <p class="subtitle"> Sale for all , All is sale</p>
-                                      <div class="button">
-                                          <a href="#" class="pill-button">Shop Now</a>
-                                      </div>
-                                    </div>
-                      </div>
-                      <div class="swiper-slide item-wrapper ">
-                              <div class="banner-img-wrapper">
-                                    <picture>
-                                          <img src="../view/img/banner3.webp" alt="Banner">
-                                    </picture>
-                                    <a href="#" class="banner-img-link"></a>
-                              </div>
-                              <div class="content-wrapper">
-                                      <h2 class="banner-title"><div>SUPERSALE 11.11</div></h2>
-                                      <p class="subtitle"> Sale for all , All is sale</p>
-                                      <div class="button">
-                                          <a href="#" class="pill-button">Shop Now</a>
-                                      </div>
-                                    </div>
-                      </div>
-                      
-                  </div>
+<main class="w-full h-auto py-10">
+<div class="swiper w-[1200px] h-auto mx-auto mySwiper">
+        <div class="swiper-wrapper">
+            <!-- slide -->
+            <div class="swiper-slide w-full">
+                <div class="w-full h-auto">
+                    <div class="w-full">
+                        <img class="w-full" src="view/img/img1.png" alt="" />
+                    </div>
                 </div>
-          </div>
-  </section>
+
+
+                <div class="text-center">
+                    <h1 class="text-5xl font-extrabold mt-6">
+                        New In: iPhone 15 series
+                    </h1>
+                    <p class="mt-3">Protect Your New iPhone</p>
+                    <button
+                        class="mt-6 text-xl font-bold text-white bg-black rounded-full py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+                        <a href="">Shop Now</a>
+                    </button>
+                </div>
+            </div>
+            <!-- slide -->
+
+            <!-- slide -->
+            <div class="swiper-slide w-full">
+                <div class="w-full h-auto">
+                    <div class="w-full">
+                        <img class="w-full " src="view/img/img1.png" alt="" />
+                    </div>
+                </div>
+
+
+                <div class="text-center">
+                    <h1 class="text-5xl font-extrabold mt-6">
+                        New In: iPhone 15 series
+                    </h1>
+                    <p class="mt-3">Protect Your New iPhone</p>
+                    <button
+                        class="mt-6 text-xl font-bold text-white bg-black rounded-full py-3 px-6 hover:shadow-mysd duration-300 hover:shadow-gray-500 hover:-translate-y-1 hover:-translate-x-1 active:shadow-none active:translate-y-0 active:translate-x-0">
+                        <a href="">Shop Now</a>
+                    </button>
+                </div>
+            </div>
+            <!-- slide -->
+
+
+
+        </div>
+        <div
+            class="swiper-button-next !top-[40%] !bg-[rbg(255,255,255,0.9)] hover:!bg-black duration-300  !w-[70px] !h-[70px] !text-white !text-5xl  !rounded-full !p-[5px] !border !border-black">
+        </div>
+        <div class="swiper-button-prev !top-[40%] !bg-[rbg(255,255,255,0.9)] hover:!bg-black !w-[70px] !h-[70px] !text-white !text-xl  !rounded-full !p-[5px] !border !border-black">
+        </div>
+    </div>
 
     <!-- bộ sưu tập -->
     <section class="w-full py-10">
@@ -173,18 +172,4 @@
         </div>
     </section>
 </main>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-      speed: 750,
-      rewind: true,
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-      loop: true,   
-      autoplay: {
-              delay: 5000,
-      },
-      });
-              
-    </script>
+   
