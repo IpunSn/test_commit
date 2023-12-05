@@ -245,6 +245,16 @@ if (!isset($_GET['page'])) {
             include 'view/login.php';
             break;
 
+        case 'fogotPass':
+
+                include 'view/fogotPass.php';
+                break;
+
+        case 'resetPass':
+
+                    include 'view/resetPass.php';
+                    break;
+
         
 
         case 'myaccount':
