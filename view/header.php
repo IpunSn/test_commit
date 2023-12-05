@@ -65,192 +65,64 @@ $html_menu='';
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="view/css/style.css">
     <link rel="stylesheet" href="view/css/output.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Home</title>
 </head>
 
 <body>
-    
-<div>
-      <div class="navigation" id="aaa-menu">
-    <div class="ribbon-container block overflow-x-hidden w-full">
-        <div class="common-ribbon ribbon-wrapper">
-          <div class="event-ribbon flex center flex-col justify-center">
-            New! iPhone 15 Cases: Ultimate Protection. Unlimited Style | SHOP NOW
-          </div>
-        </div>
-    </div>
-    <nav  class="flex items-center justify-between relative">
-          <a href="#" class="nav-logo-wrapper block">
-            <img src="../view/img/logochu.png" alt="" class="nav-logo block">
-          </a>
-          <div class="flex items-center self-stretch nav-menu-wrapper">
-            <div class="nav-wrapper">
-              <ul class="self-stretch items-stretch layer-0-wrapper">
-                <li class="layer-0 flex flex-row px-2.5">
-                  <label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">Devices</a>
-                  </label>
-                  <div class="layer-1-wrapper">
-                    <div class="layer-2-wrapper">
-                            <div class="layer-2-nav">
-                                    <span class="block layer-2-subtitle">Shop Devices</span>
-                                    <ul>
-                                      <li>
-                                        <label for="#"><span class="flex w-full layer-2-span">
-                                              <span class="menu-item-title">iPhone</span>
-                                              <i class="fa-solid fa-angle-right" style="color: #8c8c8c;"></i>
-                                      </span>
-                                    </label>
-                                    </li>
-                                      <li>
-                                        <label for="#"><span class="flex w-full layer-2-span">
-                                              <span class="menu-item-title">iPad</span>
-                                              <i class="fa-solid fa-angle-right" style="color: #8c8c8c;"></i>
-                                      </span>
-                                    </label>
-                                    </li>
-                                      <li>
-                                        <label for="#"><span class="flex w-full layer-2-span">
-                                              <span class="menu-item-title">Macbook</span>
-                                              <i class="fa-solid fa-angle-right" style="color: #8c8c8c;"></i>
-                                      </span>
-                                    </label>
-                                    </li>
-                                    </ul>
-                            </div>
-                            <div class="layer-3-wrapper">
-                              <div class="flex flex-col">
-                                <div class="layer-4-wrapper flex flex-1">
-                                  <div class="layer-5-wrapper justify-between">
-                                    <div class="layer-6-wrapper w-full">
-                                            <span class="block product-list-category">
-                                              <span class="block product-list-title">iPhone 15 Series</span>
-                                            </span>
-                                            <ul>
-                                              <li>
-                                                <a href="" id="newcontent">
-                                                  15 Pro Max
-                                                </a>
-                                              </li>
-                                              <li>
-                                                <a href="" id="newcontent">
-                                                  15 Pro 
-                                                </a>
-                                              </li>
-                                              <li>
-                                                <a href="" id="newcontent">
-                                                  15 Plus
-                                                </a>
-                                              </li>
-                                              <li>
-                                                <a href="" id="newcontent">
-                                                  15
-                                                </a>
-                                              </li>
-                                            </ul>
-                                            <span class="inline-block mt-0 layer-6-supplement-link">
-                                              <a href="#" class="font-bold text-lg">All iPhone 15 Series</a>
-                                            </span>
-                                    </div>
-                                  </div>
-                                  <div class="layer-5-wrapper justify-between">
-                                    <div class="layer-6-wrapper w-full">
-                                            <span class="block product-list-category">
-                                              <span class="block product-list-title">iPhone 14 Series</span>
-                                            </span>
-                                            <ul>
-                                              <li>15 Pro Max</li>
-                                              <li>15 Pro</li>
-                                              <li>15 Plus</li>
-                                              <li>15 </li>
-                                            </ul>
-                                    </div>
-                                  </div>
-                                  <div class="layer-5-wrapper justify-between">
-                                    <div class="layer-6-wrapper w-full">
-                                            <span class="block product-list-category">
-                                              <span class="block product-list-title">iPhone 13 Series </span>
-                                            </span>
-                                            <ul>
-                                              <li>15 Pro Max</li>
-                                              <li>15 Pro</li>
-                                              <li>15 Plus</li>
-                                              <li>15 </li>
-                                              <li>15 Pro Max</li>
-                                              <li>15 Pro</li>
-                                              <li>15 Plus</li>
-                                              <li>15 </li>
-                                            </ul>
-                                    </div>
-                                  </div>
-                                  <div class="layer-5-wrapper justify-between">iPhone 14 Series</div>
-                                  <div class="layer-5-wrapper justify-between">iPhone 13 Series</div>
-                                </div>
-                              </div>
-                            </div>
+    <div class="w-[1480px] px-5 my-0 mx-auto font-roboto">
+        <header class="w-full pt-5">
+            <nav class="w-full h-20 grid grid-cols-[15%_70%_auto] relative">
+                <div class="w-full">
+                    <div class="w-full h-full relative">
+                    <a href="index.php"><img class="w-full h-full px-5 absolute top-0 left-0"
+                                src="view/img/logo.png" alt="" /></a>
                     </div>
-                  </div>
-                </li>
-                <li class="layer-0 flex flex-row px-2.5"><label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">Prints</a>
-                  </label>
-                </li>
-                <li class="layer-0 flex flex-row px-2.5"><label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">Co-Lab</a>
-                  </label>
-                </li>
-                <li class="layer-0 flex flex-row px-2.5"><label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">Customization</a>
-                  </label>
-                </li>
-                <li class="layer-0 flex flex-row px-2.5"><label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">Products</a>
-                  </label>
-                </li>
-                <li class="layer-0 flex flex-row px-2.5"><label for="#">
-                    <a href="#" class="flex flex-col justify-center h-full layer-0">News & Featured</a>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="access-menu items-stretch flex">
-              <div class="relative justify-center items-center flex flex-col">
-                  <a href="#" title="User">
-                    <img src="../view/img/user.svg" alt="User Icon" class="access-icon block" width="24" height="24">  
-                  </a>
-              </div>
-              <div class="nav-button relative search-nav justify-center items-center" style="margin: 0 12px;line-height: normal;">
-                  <a href="#" title="Search">
-                      <img src="../view/img/search.svg" alt="" width="24" height="24">
-                  </a>
-              </div>
-              <div class="nav-button relative cart-nav shopping-cart-button inline-block">
-
-                <a href="#" class="cart-icon">
-                  <img src="../view/img/cart.svg" alt="" width="24" he ght="24">
-                  <div id="cart-count">1</div>
-                </a>
-                <div class="cart-overlay">
-                  <div class="cart-panel">
-                    <div class="co-ribbon-wrapper">
-                      <div class="common-ribbon ribbon-wrapper nav-2023-ribbon">
-                            <div class="event-ribbon flex v-center">
-                              <div class="relative text-center pl-[22px]"></div>
-                            </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-          </div>
-    </nav>
-    </div>
-  </div>
-  
+                <div class="w-full h-full flex px-4 justify-center  items-center">
+                    <?=$html_menu?>
+                    <div class="text-lg font-semibold"><a href="index.php?page=list_product">All Product</a></div> 
+                    
+                </div>
+        
+                <div class="w-full flex justify-end items-center gap-x-5">
+                    <div class="text-left">
+                        <?=$html_acc?>
+                    </div>
+                    <button class="collapsible"><a href=""></a><img src="view/img/search.svg" alt="" /></button>
+                    <div class="relative"><a href="index.php?page=cart"><img src="view/img/cart.svg" alt="" /></a> <span class="w-6 h-6 text-white bg-black text-center rounded-full  absolute -top-3 -right-5"><?=$html_count_cart?></span></div>
+                </div>
+            </nav>
+            <div  class="content  overflow-hidden max-h-0  w-[450px] ml-auto duration-500">
+        
+            
+                <form class="search w-96  relative" action="index.php?page=list_product" method="post">
+                    <input class="w-full border border-black p-2 rounded-lg" type="text" name="keyword" value="" placeholder="Tìm kiếm ... ">
+                    
+                </form>
+            </div>
+            <div class="w-full hidden bg-black  aaa-1"> d</div>
+        </header>
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = document.getElementsByClassName("content")[0];
+
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
