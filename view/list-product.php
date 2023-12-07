@@ -27,13 +27,29 @@
     }
 
 ?>
+
 <main class="w-full h-auto py-10 px-5">
     <div class="w-fit font-bold text-2xl"><?=$tittle?></div>
-    <div class="w-full mt-12 p-5 bg-white rounded-[20px] shadow-sm shadow-black flex justify-between">
-        <select class="w-fit p-2.5 border border-black rounded-md font-bold" name="" id="">
-            <option class="w-full h-12 p-2.5" value="">Iphone</option>
-            <option class="w-full h-12 p-2.5" value="">Danh mục</option>
-        </select>
+    <div class="w-full mt-12 p-5 bg-white rounded-[20px] shadow-sm shadow-black flex justify-between items-center">
+        <div class="w-[calc(100%-200px)] h-full  flex justify-between  font-semibold text-lg"><?php
+       if($tittle ==='Tất cả sản phẩm') {
+        $all_dm=admin_dm();
+        foreach($all_dm as $catelogy_all){
+            echo '
+           
+            <a href="index.php?page=list_product&iddm='.$catelogy_all['id'].'">'.$catelogy_all['name'].'</a>
+            
+            ';
+        }
+       
+       }
+     else {
+        $menu_danhmuc=menu_dm($id_LoaiDanhMuc);
+        foreach($menu_danhmuc as $catelogy){
+            echo '<a href="index.php?page=list_product&iddm='.$catelogy['id'].'">'.$catelogy['name'].'</a>';
+        }
+       }
+       ?></div>
         <select class="w-fit p-2.5 border border-black rounded-md font-bold" name="" id="">
             <option class="w-full h-12 p-2.5" value="">Sắp xếp theo</option>
             <option value=""><a href="index.php?page=price=1">Giá thấp nhất</a></option>
