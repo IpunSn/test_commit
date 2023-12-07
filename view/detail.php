@@ -9,7 +9,7 @@ foreach ($product_dungluong as $item) {
     extract($item);
     $html_dl .= '
           <div class="">
-                    <input type="radio" id="' . $Ma_DungLuong . '" name="dungluong" value="' . $Ma_DungLuong . '" class="hidden peer" required="Bạn phải nhập">
+                    <input type="radio" id="' . $Ma_DungLuong . '" name="dungluong" value="' . $Ma_DungLuong . '" class="hidden peer">
                     <label for="' . $Ma_DungLuong . '" class="inline-flex items-center justify-between w-full p-2 text-black bg-white border-2 border-black rounded-lg cursor-pointer   peer-checked:text-white peer-checked:border-black peer-checked:bg-black  hover:text-white hover:bg-black duration-500">                           
                         <div class="block">
                             <div class="w-full font-bold">' . $Ma_DungLuong . '</div>
@@ -25,7 +25,7 @@ foreach ($product_color as $item) {
     extract($item);
     $html_color .= '
         <div class="">
-                    <input type="radio" id="' . $Ma_Mau . '" name="color" value="' . $Ma_Mau . '" class="hidden peer" required>
+                    <input type="radio" id="' . $Ma_Mau . '" name="color" value="' . $Ma_Mau . '" class="hidden peer">
                     <label for="' . $Ma_Mau . '" class="inline-flex items-center justify-between w-full p-2 text-black bg-white border-2 border-black rounded-lg cursor-pointer   peer-checked:text-white peer-checked:border-black peer-checked:bg-black  hover:text-white hover:bg-black ">                           
                         <div class="block">
                             <div class="w-full">' . $Ma_Mau . '</div>
@@ -89,7 +89,7 @@ foreach($product_img as $list_img){
 
 <main class="w-full h-auto py-10">
     <section class="max-w-7xl px-4 mx-auto">
-        <form action="index.php?page=add-cart" method="post" class="w-full flex gap-x-[50px] py-10">
+        <form action="index.php?page=add-cart" method="post" class="w-full flex gap-x-[50px] py-10" onsubmit="return validdetailinput()">
 
             <div class="w-1/3  mx-auto ">
                 <div class="w-full  bg-[#f2f2f2]  relative rounded-xl border border-black">
@@ -126,18 +126,19 @@ foreach($product_img as $list_img){
                     <h2 class="text-2xl">Dung lương :</h2>
                     <?= $html_dl ?>
                 </div>
-
+                <span class="storage-error  text-red-500"> </span>
 
                 <div class="flex items-center justify-start gap-5 mt-5">
                     <h2 class="text-2xl">Màu sắc :</h2>
                     <?= $html_color ?>
                 </div>
+                <span class="color-error text-red-500"> </span>
 
                 <div class="mt-5 w-fit flex gap-5 items-center font-semibold text-lg">
-                    <div class="w-[170px] p-2 flex justify-evenly items-center bg-[#F3F3F3] rounded-3xl">
-                        <button type="button"><i class='bx bx-minus'></i></button>
-                        <input class="w-6 bg-[#F3F3F3]" type="number" name="soluong" value="1" min="1" max="5" step="1">
-                        <button type="button"><i class='bx bx-plus-medical'></i></button>
+                    <div class="w-[170px] p-2 flex justify-evenly items-center bg-[#F3F3F3] rounded-3xl quantity-container">
+                        <button type="button" class="incre-quantity" onclick="dec()"><i class='bx bx-minus'></i></button>
+                        <input class="w-6 bg-[#F3F3F3] text-center" type="number" name="soluong" value="1" min="1" step="1">
+                        <button type="button" class="decre-quantity" onclick="inc()"><i class='bx bx-plus'></i></button>
                     </div>
 
                     <button type="submit" name="btn-add-cart"
@@ -263,4 +264,44 @@ foreach($product_img as $list_img){
 
         document.getElementById("anh-goc").setAttribute("src", x.src);
     }
+
+
+    function validdetailinput() {
+        var dungluongSelected = document.querySelector('input[name="dungluong"]:checked');
+        var colorSelected = document.querySelector('input[name="color"]:checked');
+        var storageError = document.querySelector('.storage-error');
+        var colorError = document.querySelector('.color-error');
+        var btnAddCart = document.getElementById('btn-add-cart');
+
+        storageError.textContent = ''; 
+        colorError.textContent = '';
+
+        if (!dungluongSelected) {
+            storageError.textContent = 'Vui lòng chọn Dung lượng.';
+        }
+
+        if (!colorSelected) {
+            colorError.textContent = 'Vui lòng chọn Màu sắc.';
+        }
+
+        if (!dungluongSelected || !colorSelected) {
+            return false; 
+        }
+
+        return true; 
+    }
+
+    function inc() {
+        let soluong = document.querySelector('[name="soluong"]');
+        
+            soluong.value = parseInt(soluong.value) + 1;
+}
+
+function dec() {
+        let soluong = document.querySelector('[name="soluong"]');
+            if (parseInt(soluong.value) > 0) {
+            soluong.value = parseInt(soluong.value) - 1;
+        }
+}
+        
 </script>
