@@ -82,8 +82,23 @@ function menu_dm($id_LoaiDanhMuc){
     $sql="SELECT * FROM danhmuc where id_LoaiDanhMuc=?";
     return pdo_query($sql,$id_LoaiDanhMuc);
 }
-
-
+// Loại danh mục
+function check_name_ldm($name_LDM){
+    $sql="SELECT * FROM loaidanhmuc where name_LDM=?";
+      return pdo_query_one($sql,$name_LDM);
+   }
+//Loại danh mục
+   function getOne_loai_dm($id){
+    $sql="SELECT * FROM loaidanhmuc where id=?";
+    return pdo_query_one($sql,$id);
+}
+//  xóa loại danh mục
+// xóa ảnh loại danh mục
+function get_img_ldm($id){
+    $sql="SELECT img FROM loaidanhmuc where id=?";
+    $get_img=pdo_query_one($sql,$id);
+    return $get_img['img'];
+  }
 // /**
 //  * Thêm loại mới
 //  * @param String $ten_loai là tên loại

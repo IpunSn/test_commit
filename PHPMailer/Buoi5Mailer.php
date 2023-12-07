@@ -26,6 +26,7 @@
   }
 
   $sql = "UPDATE user SET reset_token='$reset_token' WHERE email='$email'";
+  
   mysqli_query($connection, $sql);
 
   $message = "<p>Please click the link below to reset your password</p>";
